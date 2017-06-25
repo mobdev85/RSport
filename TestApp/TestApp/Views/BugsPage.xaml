@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:renderer="clr-namespace:TestApp.Renderers;assembly=TestApp"
+    x:Class="TestApp.Views.BugsPage"
+    Title="Bugs" BackgroundImage="background.png">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Label Text="Please report all bugs to" TextColor="{StaticResource PrimaryLabelText}" Font="12" HorizontalTextAlignment="Center" Margin="0,30,0,0" />
+            <Label Text="support@urspotapp.com" TextColor="{StaticResource PrimaryLabelText}" Font="24" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Label Text="Enter issue in the following text box." TextColor="Silver" Font="12" HorizontalTextAlignment="Center" />
+
+            <Frame BackgroundColor="{StaticResource EditorBackground}" CornerRadius="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="120">
+                <renderer:ExtendedEditor Placeholder="Enter the bug detail here..." TextColor="White" PlaceholderColor="Silver" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="100"/>
+            </Frame>
+
+            <Button x:Name="SendBugButton" Text="" TextColor="White" Image="bug_button" VerticalOptions="End" HorizontalOptions="Center" HeightRequest="40" Margin="0,0,0,20" />
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
