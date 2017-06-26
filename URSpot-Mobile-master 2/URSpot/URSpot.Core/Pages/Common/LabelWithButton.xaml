@@ -1,0 +1,26 @@
+﻿<ContentView x:Name="root" xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:m="clr-namespace:URSpot.Core.Pages.Common"
+             x:Class="URSpot.Core.Pages.Common.LabelWithButton">
+    <ContentView.Content>
+        <StackLayout Orientation ="Horizontal">
+            <Label x:Name="PART_Entry" 
+                   Margin="{Binding ContentMargin, Source={Reference root}}"
+                   TextColor="{Binding TextColor, Source={Reference root}}"
+                   FontAttributes="{Binding FontAttributes, Source={Reference root}}"
+                   FontSize="{Binding FontSize, Source={Reference root}}"
+                   FontFamily="{Binding FontFamily, Source={Reference root}}"
+                   Text="{Binding Text,Source={Reference root}}"
+                   HorizontalOptions = "StartAndExpand"></Label>
+
+            <Label x:Name="PART_Button"
+                   Margin="{Binding ButtonMargin, Source={Reference root}}"
+                   Text="{Binding TextButton,Source={Reference root}}"
+                   FontSize="{Binding FontSize, Source={Reference root}}"
+                   FontFamily="{Binding FontFamily, Source={Reference root}}"
+                   TextColor="{Binding TextButtonColor, Source={Reference root}}" 
+                   FontAttributes ="Bold" XAlign = "End" HorizontalOptions="EndAndExpand">
+            </Label>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<p:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:p="clr-namespace:URSpot.Core.Pages.Base"
+            NavigationPage.HasNavigationBar="False"
+            x:Class="URSpot.Core.Pages.Account.LaunchPage"
+            xmlns:b="clr-namespace:URSpot.Core.Behaviors"
+            BackgroundColor="DarkBlue">
+  <Grid>
+    <Image Source="{Binding BackgroundImage}" Aspect="Fill" />
+    <!-- Contains the rest of the layout for the page. -->
+      <StackLayout Spacing="10" Padding="0" VerticalOptions="EndAndExpand">
+            <StackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,30,20,20">
+                <Label Text="Tonight's info at your fingertips" Style="{StaticResource mediumLabelStyle}"></Label>
+                <Button Command="{Binding SignInCommand}" Text="Sign In" TextColor="White" FontAttributes ="Bold" 
+                        Style="{StaticResource roundTransparentCornerbutton}"></Button>
+                <Button Command="{Binding SignUpCommand}" Text="Sign Up" TextColor="White" FontAttributes ="Bold"
+                        Style="{StaticResource roundCornerbutton}"></Button>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+  <ContentPage.Behaviors>
+    <b:EventHandlerBehavior EventName="Appearing" Command="{Binding PageAppearingCommand}">
+    </b:EventHandlerBehavior>
+    <b:EventHandlerBehavior EventName="Disappearing" Command="{Binding PageDisappearingCommand}">
+    </b:EventHandlerBehavior>
+  </ContentPage.Behaviors>
+</p:BasePage>
