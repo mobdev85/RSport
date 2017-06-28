@@ -7,11 +7,44 @@ namespace URSpot.Core.Pages.Account
 {
     public partial class MyProfilePage : ContentPage
     {
-        public MyProfilePage()
+
+
+        private List<String> FavoriteMusic;
+        private List<String> FavoriteSports;
+		
+
+		//FavoriteMusicList..
+		public MyProfilePage()
         {
             InitializeComponent();
+            InitializeLists();
             AdjustViewsWidth();
             AddToolbarItems();
+        }
+
+
+        void InitializeLists(){
+            FavoriteMusic = new List<string>();
+            FavoriteMusic.Add("Favorite Music");
+            FavoriteMusic.Add("Music 1");
+            FavoriteMusic.Add("Music 2");
+            FavoriteMusic.Add("Music 3");
+
+            FavoriteSports = new List<string>();
+            FavoriteSports.Add("Favorite Sports");
+            FavoriteSports.Add("Sports 1");
+            FavoriteSports.Add("Sports 2");
+            FavoriteSports.Add("Sports 3");
+
+
+
+            this.FavoriteMusicList.ItemsSource = FavoriteMusic;
+            this.FavoriteMusicList.SelectedIndex = 0;
+
+            this.FavoriteSportsList.ItemsSource = FavoriteSports;
+            this.FavoriteSportsList.SelectedIndex = 0;
+
+            
         }
 
 		void MaleBtn_Clicked(object sender, EventArgs e)

@@ -77,5 +77,8 @@ namespace URSpot.Core.Pages.Common
         /// </summary>
         public static readonly BindableProperty BorderRadiusProperty =
         BindableProperty.Create("BorderRadius", typeof(Int32), typeof(CircleImage), 0);
+
+
+		
     }
 }

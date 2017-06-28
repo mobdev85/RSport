@@ -3,6 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:renderer="clr-namespace:URSpot.Core.Pages.Common;assembly=URSpot.Core"
     x:Class="URSpot.Core.Pages.BugPage"
+    xmlns:m="clr-namespace:URSpot.Core.Pages.Common"
+    xmlns:r="clr-namespace:URSpot.Core.Resources"
     Title="Bug" BackgroundImage="background.png">
     
 	<ContentPage.Content>
@@ -12,10 +14,10 @@
             <Label Text="Enter issue in the following text box." TextColor="Silver" Font="12" HorizontalTextAlignment="Center" />
 
             <Frame BackgroundColor="{StaticResource EditorBackground}" CornerRadius="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="120">
-                <renderer:ExtendedEditor Placeholder="Enter the bug detail here..." TextColor="White" PlaceholderColor="Silver" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="100"/>
+                <renderer:ExtendedEditor Placeholder="{Static r:CommonResources.BugPlaceHolder}" TextColor="White" PlaceholderColor="Silver" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="100"/>
             </Frame>
 
-            <Button x:Name="SendBugButton" Text="" TextColor="White" Image="bug_button" VerticalOptions="End" HorizontalOptions="Center" HeightRequest="40" Margin="0,0,0,20" />
+            <Button x:Name="SendBugButton" Text=""  Image="bug_button.png"  Style="{StaticResource roundCornerZeroBorderbutton}"/>
            
         </StackLayout>
 	</ContentPage.Content>

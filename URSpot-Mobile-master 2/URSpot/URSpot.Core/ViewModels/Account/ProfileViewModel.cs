@@ -18,5 +18,19 @@ namespace URSpot.Core.ViewModels.Account
 
         public MvxCommand MyProfileCommand => new MvxCommand(() => ShowViewModel<MyProfileViewModel>());
         public MvxCommand BugCommand => new MvxCommand(() => ShowViewModel<BugViewModel>());
+
+
+
+  //      public String ImageSrc
+  //      { 
+  //          get { return "profile"; }
+  //      }
+
+		//public String LabelTxt
+		//{
+		//	get { return "My Profile"; }
+		//}
+
+
     }
 }

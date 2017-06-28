@@ -135,7 +135,6 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <BundleResource Include="Resources\about_urspot.png" />
     <BundleResource Include="Resources\background.png" />
-    <BundleResource Include="Resources\bug.png" />
     <BundleResource Include="Resources\invite_friends.png" />
     <BundleResource Include="Resources\payment.png" />
     <BundleResource Include="Resources\profile.png" />
