@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:m="clr-namespace:URSpot.Core.Pages.Common"
+             xmlns:r="clr-namespace:URSpot.Core.Resources"
+             x:Class="URSpot.Core.Pages.Common.NavigationBarView">
+    <ContentView.Resources>
+            <ResourceDictionary>
+                <Style x:Key="unselected" TargetType="m:LabelWithImage">
+                    <Setter Property="BackgroundColor" Value="{StaticResource DarkBlue}"></Setter>
+                    <Setter Property="ImagePosition" Value="Top"></Setter>
+                    <Setter Property="FontSize" Value="10"></Setter>
+                    <Setter Property="IconMargin" Value="0"></Setter>
+                    <Setter Property="ContentMargin" Value="0"></Setter>
+                    <Setter Property="TextColor" Value="{StaticResource CornFlowerBlue}"></Setter>
+                    <Setter Property="IconTintColor" Value="{StaticResource CornFlowerBlue}"></Setter>
+                    <Setter Property="LineWidth" Value="0"></Setter>
+                </Style>
+                <Style x:Key="selected" TargetType="m:LabelWithImage">
+                    <Setter Property="BackgroundColor" Value="{StaticResource DarkBlue}"></Setter>
+                    <Setter Property="ImagePosition" Value="Top"></Setter>
+                    <Setter Property="FontSize" Value="10"></Setter>
+                    <Setter Property="IconMargin" Value="0"></Setter>
+                    <Setter Property="ContentMargin" Value="0"></Setter>
+                    <Setter Property="TextColor" Value="{StaticResource DeepBlue}"></Setter>
+                    <Setter Property="IconTintColor" Value="{StaticResource DeepBlue}"></Setter>
+                    <Setter Property="LineWidth" Value="0"></Setter>
+                </Style>
+            </ResourceDictionary>
+        </ContentView.Resources>
+        <ContentView.Content>
+            <Grid x:Name="PART_Grid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <m:LabelWithImage Text="{Static r:CommonResources.MenuSignIn}" 
+                              Grid.Column="0"
+                              TappedCommand="{Binding Global.GoToSignIn}"
+                              Style="{StaticResource unselected}"
+                              Icon="{m:ImageResource Icons/ic_account.png}">
+                </m:LabelWithImage>
+
+            <m:LabelWithImage Text="{Static r:CommonResources.MenuFavourites}"
+                              Grid.Column="1"
+                              TappedCommand="{Binding Global.GoToFavourites}"
+                              Style="{StaticResource unselected}"
+                              Icon="{m:ImageResource Icons/ic_heart*.png}">
+                </m:LabelWithImage>
+
+            <m:LabelWithImage Text="{Static r:CommonResources.MenuHome}"  
+                              TappedCommand="{Binding Global.GoToHome}"
+                              Grid.Column="2"
+                              Style="{StaticResource unselected}"
+                              Icon="{m:ImageResource Icons/ic_home*.png}">
+                </m:LabelWithImage>
+
+            <m:LabelWithImage Text="{Static r:CommonResources.MenuFriends}" 
+                              TappedCommand="{Binding Global.GoToFriends}"
+                              Grid.Column="3"
+                              Style="{StaticResource unselected}"
+                              Icon="{m:ImageResource Icons/ic_friends*.png}">
+                </m:LabelWithImage>
+
+            <m:LabelWithImage Text="{Static r:CommonResources.MenuProfile}" 
+                              TappedCommand="{Binding Global.GoToProfile}"
+                              Grid.Column="4"
+                              Style="{StaticResource unselected}"
+                              Icon="{m:ImageResource Icons/ic_profile*.png}">
+                </m:LabelWithImage>
+
+            </Grid>
+        </ContentView.Content>
+    </ContentView>

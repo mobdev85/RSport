@@ -1,0 +1,35 @@
+﻿<ContentView x:Name="root" xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:m="clr-namespace:URSpot.Core.Pages.Common"
+             x:Class="URSpot.Core.Pages.Common.LabelWithImage">
+  <ContentView.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Column="1" Grid.Row="1" x:Name="PART_Entry" 
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   Margin="{Binding ContentMargin, Source={Reference root}}"
+                   TextColor="{Binding TextColor, Source={Reference root}}"
+                   FontAttributes="{Binding FontAttributes, Source={Reference root}}"
+                   FontSize="{Binding FontSize, Source={Reference root}}"
+                   FontFamily="{Binding FontFamily, Source={Reference root}}"
+                   Text="{Binding Text,Source={Reference root}}" ></Label>
+
+            
+            <m:TintedImage Grid.Column="0" Grid.Row="1"
+                           TintColor="{Binding IconTintColor,Source={Reference root}}"
+                           x:Name="PART_Image" 
+                           HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                           Source="{Binding Icon,Source={Reference root}}" Margin="{Binding IconMargin, Source={Reference root}}"></m:TintedImage>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

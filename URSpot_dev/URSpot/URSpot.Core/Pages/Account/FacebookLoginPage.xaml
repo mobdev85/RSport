@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:p="clr-namespace:URSpot.Core.Pages.Base"
+            NavigationPage.HasNavigationBar="False"
+            xmlns:m="clr-namespace:URSpot.Core.Pages.Common"
+            x:Class="URSpot.Core.Pages.Account.FacebookLoginPage"
+            xmlns:b="clr-namespace:URSpot.Core.Behaviors">
+    <StackLayout x:Name="MainStackLayout">
+      <m:MVVMWebView x:Name="Browser" Source="{Binding GatewayPageSource,Mode=TwoWay}"
+                     WidthRequest="1000" HeightRequest="1000" NavigatedCommand="WebViewNavigatedCommand">
+        <!--<m:MVVMWebView.Behaviors>
+          <b:EventHandlerBehavior EventName="Navigated" Command="{Binding WebViewNavigatedCommand}">
+          </b:EventHandlerBehavior>
+        </m:MVVMWebView.Behaviors>-->
+      </m:MVVMWebView>
+    </StackLayout>
+</ContentPage>

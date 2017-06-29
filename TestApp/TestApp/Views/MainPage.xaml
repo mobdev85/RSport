@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:profile="clr-namespace:TestApp.Views.Auth;assembly=TestApp"
+    xmlns:local="clr-namespace:TestApp.Views;assembly=TestApp"
+    x:Class="TestApp.Views.MainPage">
+
+    <NavigationPage Title="Home" Icon="tab_home.png">
+        <x:Arguments>
+            <local:HomePage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Favorites" Icon="tab_favorite.png">
+        <x:Arguments>
+            <local:FavoritePage />
+        </x:Arguments>
+    </NavigationPage>
+    
+    <NavigationPage Title="Friends" Icon="tab_friends.png">
+        <x:Arguments>
+            <local:FriendPage />
+        </x:Arguments>
+    </NavigationPage>
+    
+    <NavigationPage Title="Profile" Icon="tab_profile.png">
+        <x:Arguments>
+            <local:ProfilePage />
+        </x:Arguments>
+    </NavigationPage>
+	
+</TabbedPage>

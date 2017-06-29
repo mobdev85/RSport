@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:m="clr-namespace:URSpot.Core.Pages.Common"
+             x:Class="URSpot.Core.Pages.Base.BasePage">
+    <Page.ControlTemplate>
+        <ControlTemplate>
+            <AbsoluteLayout BindingContext="{TemplateBinding BindingContext}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                <ContentPresenter AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" ></ContentPresenter>
+                <Grid AbsoluteLayout.LayoutFlags="All" BackgroundColor="#FA5252" AbsoluteLayout.LayoutBounds=".5, 1, 1, .2" IsVisible="{Binding HasMessage}" x:Name="PART_Error">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding DismissMessage}"></TapGestureRecognizer>
+                    </Grid.GestureRecognizers>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="{Binding Message}" Margin="15,15,0,0" TextColor="White"></Label>
+                    <Image VerticalOptions="Start" Source="{m:ImageResource Error.png}" Grid.Column="1" Margin="0,15,5,0"></Image>
+                </Grid>
+                <ContentView IsVisible="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                             BackgroundColor="White"
+                             AbsoluteLayout.LayoutFlags="All" 
+                             AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                             x:Name="PART_Modal"></ContentView >
+            </AbsoluteLayout>
+        </ControlTemplate>
+    </Page.ControlTemplate>
+</ContentPage>

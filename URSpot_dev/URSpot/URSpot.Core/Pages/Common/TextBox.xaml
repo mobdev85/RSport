@@ -1,0 +1,29 @@
+﻿<ContentView x:Name="root" xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:URSpot.Core.Behaviors"
+             xmlns:m="clr-namespace:URSpot.Core.Pages.Common"
+             x:Class="URSpot.Core.Pages.Common.TextBox">
+    <ContentView.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Entry Grid.Column="1" x:Name="PART_Entry" 
+                   IsEnabled="{Binding IsEnabled,Source={Reference root}}" 
+                   Text="{Binding Text,Source={Reference root}}" 
+                   TextColor="{Binding TextColor, Source={Reference root}}"
+                   FontSize ="{Binding FontSize,Source={Reference root}}"
+                   FontAttributes="{Binding FontAttributes, Source={Reference root}}"
+                   FontFamily="{Binding FontFamily, Source={Reference root}}"
+                   IsPassword="{Binding IsPassword,Source={Reference root}}"
+                   Placeholder="{Binding Placeholder,Source={Reference root}}"
+                   Keyboard="{Binding Keyboard,Source={Reference root}}"></Entry>
+            <m:TintedImage x:Name="PART_Image" 
+                           Grid.Column="0"
+                           TintColor="{Binding IconTintColor,Source={Reference root}}"
+                           Source="{Binding Icon,Source={Reference root}}" ></m:TintedImage>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

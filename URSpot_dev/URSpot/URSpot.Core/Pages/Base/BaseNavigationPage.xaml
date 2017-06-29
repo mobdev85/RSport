@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<p:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:p="clr-namespace:URSpot.Core.Pages.Base"
+            xmlns:r="clr-namespace:URSpot.Core.Resources"
+            NavigationPage.HasNavigationBar="False"
+            xmlns:b="clr-namespace:URSpot.Core.Behaviors"
+            xmlns:m="clr-namespace:URSpot.Core.Pages.Common"
+            x:Class="URSpot.Core.Pages.Base.BaseNavigationPage">
+    <p:BasePage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>0,20,0,0</OnPlatform.iOS>
+            <OnPlatform.Android>0,0,0,0</OnPlatform.Android>
+        </OnPlatform>
+    </p:BasePage.Padding>
+    <p:BasePage.ControlTemplate>
+        <ControlTemplate>
+            <Grid BindingContext="{TemplateBinding BindingContext}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ContentPresenter Grid.Row="1"></ContentPresenter>
+                <m:NavigationBarView Grid.Row="2" IsVisible="{Binding IsNavigationVisible}" SelectedNavigation="{Binding CurrentNavigationBarItem}" x:Name="NavigationMenuBar"></m:NavigationBarView>
+    
+                <ContentView IsVisible="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10"
+                             BackgroundColor="White"
+                             Grid.RowSpan="3"
+                             AbsoluteLayout.LayoutBounds="1,1,1,1"
+                             x:Name="PART_Modal"></ContentView >
+
+            </Grid>
+        </ControlTemplate>
+    </p:BasePage.ControlTemplate>
+</p:BasePage>

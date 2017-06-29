@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:p="clr-namespace:URSpot.Core.Pages.Base"
+    NavigationPage.HasNavigationBar="TRUE"
+    xmlns:viewModels="clr-namespace:URSpot.Core.ViewModels;assembly=URSpot.Core"
+    x:Class="URSpot.Core.Pages.Account.ProfilePage"
+    Title="Profile" BackgroundImage="background.png">
+    
+	<ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="10" Padding="10">
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Frame x:Name="profileFrame" BackgroundColor="{StaticResource ProfileCellBackground}" WidthRequest="{Binding CellWidth}" CornerRadius="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding MyProfileCommand}" />
+                    </Frame.GestureRecognizers>
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="profile.png" WidthRequest="30" HeightRequest="30" Aspect="AspectFit" HorizontalOptions="Start" />
+                        <Label Text="My Profile" TextColor="White" HorizontalOptions="Start" Font="10" FontAttributes="Bold" />
+                    </StackLayout>
+                </Frame>
+                <Frame x:Name="socialFrame" BackgroundColor="{StaticResource ProfileCellBackground}" WidthRequest="{Binding CellWidth}" CornerRadius="10">
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="social.png" WidthRequest="30" HeightRequest="30" Aspect="AspectFit" HorizontalOptions="Start" />
+                        <Label Text="Social Networks" TextColor="White" HorizontalOptions="Start" Font="10" FontAttributes="Bold" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Frame x:Name="paymentFrame" BackgroundColor="{StaticResource ProfileCellBackground}" WidthRequest="{Binding CellWidth}" CornerRadius="10">
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="payment.png" WidthRequest="30" HeightRequest="30" Aspect="AspectFit" HorizontalOptions="Start" />
+                        <Label Text="Payment" TextColor="White" HorizontalOptions="Start" Font="10" FontAttributes="Bold" />
+                    </StackLayout>
+                </Frame>
+                <Frame x:Name="rewardsFrame" BackgroundColor="{StaticResource ProfileCellBackground}" WidthRequest="{Binding CellWidth}" CornerRadius="10">
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="rewards.png" WidthRequest="30" HeightRequest="30" Aspect="AspectFit" HorizontalOptions="Start" />
+                        <Label Text="Rewards" TextColor="White" HorizontalOptions="Start" Font="10" FontAttributes="Bold" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Frame x:Name="inviteFriendsFrame" BackgroundColor="{StaticResource ProfileCellBackground}" WidthRequest="{Binding CellWidth}" CornerRadius="10">
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="invite_friends.png" WidthRequest="30" HeightRequest="30" Aspect="AspectFit" HorizontalOptions="Start" />
+                        <Label Text="Invite Friends" TextColor="White" HorizontalOptions="Start" Font="10" FontAttributes="Bold" />
+                    </StackLayout>
+                </Frame>
+                <Frame x:Name="promotionsFrame" BackgroundColor="{StaticResource ProfileCellBackground}" WidthRequest="{Binding CellWidth}" CornerRadius="10">
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="promotions.png" WidthRequest="30" HeightRequest="30" Aspect="AspectFit" HorizontalOptions="Start" />
+                        <Label Text="Promotions" TextColor="White" HorizontalOptions="Start" Font="10" FontAttributes="Bold" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Frame x:Name="aboutUrspotFrame" BackgroundColor="{StaticResource ProfileCellBackground}" WidthRequest="{Binding CellWidth}" CornerRadius="10">
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="about_urspot.png" WidthRequest="30" HeightRequest="30" Aspect="AspectFit" HorizontalOptions="Start" />
+                        <Label Text="About URSPOT App" TextColor="White" HorizontalOptions="Start" Font="10" FontAttributes="Bold" />
+                    </StackLayout>
+                </Frame>
+                <Frame x:Name="signoutFrame" BackgroundColor="{StaticResource ProfileCellBackground}" WidthRequest="{Binding CellWidth}" CornerRadius="10">
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="signout.png" WidthRequest="30" HeightRequest="30" Aspect="AspectFit" HorizontalOptions="Start" />
+                        <Label Text="Sign Out" TextColor="White" HorizontalOptions="Start" Font="10" FontAttributes="Bold" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <Image Source="bug.png" HorizontalOptions="End" VerticalOptions="End" WidthRequest="50" HeightRequest="50" Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding BugCommand}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+        </StackLayout>    
+	</ContentPage.Content>
+    
+</p:BasePage>
