@@ -132,4 +132,94 @@
   <data name="MenuSignIn" xml:space="preserve">
     <value>Sign In</value>
   </data>
+
+  <data name="FirstName" xml:space="preserve">
+    <value>Frist Name</value>
+  </data>
+
+	<data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+
+	<data name="UserName" xml:space="preserve">
+    <value>Username</value>
+  </data>
+
+	<data name="Email" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+
+	<data name="Age" xml:space="preserve">
+    <value>Age</value>
+  </data>
+
+	<data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+
+	<data name="GenderMale" xml:space="preserve">
+    <value>Male</value>
+  </data>
+
+	<data name="GenderFemale" xml:space="preserve">
+    <value>Female</value>
+  </data>
+
+	<data name="GenderCustom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+
+  <data name="LocationMessage" xml:space="preserve">
+    <value>Would you like your location to be made visible to your friends</value>
+  </data>
+
+	<data name="AnswerYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+
+	<data name="AnswerNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+
+	<data name="DeleteAccount" xml:space="preserve">
+    <value>Delete Account</value>
+  </data>
+
+	<data name="BugPlaceHolder" xml:space="preserve">
+    <value>Enter the bug detail here...</value>
+  </data>
+
+
+
+	<data name="LabelTextProfile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+	<data name="LabelTextSocialNetworks" xml:space="preserve">
+    <value>Social Networks</value>
+  </data>
+	<data name="LabelTextPayment" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+	
+	<data name="LabelTextRewards" xml:space="preserve">
+    <value>Rewards</value>
+  </data>
+	
+	<data name="LabelTextInviteFriend" xml:space="preserve">
+    <value>Invite Friends</value>
+  </data>
+	
+	<data name="LabelTextPromotion" xml:space="preserve">
+    <value>Promotions</value>
+  </data>
+	<data name="LabelTextAboutApp" xml:space="preserve">
+    <value>About URSPOT App</value>
+  </data>
+	<data name="LabelTextSignout" xml:space="preserve">
+    <value>Sign Out</value>
+  </data>
+
+	
+
+	
 </root>

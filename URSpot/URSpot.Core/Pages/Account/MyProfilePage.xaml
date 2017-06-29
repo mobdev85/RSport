@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:p="clr-namespace:URSpot.Core.Pages.Base"
+    xmlns:m="clr-namespace:URSpot.Core.Pages.Common"
+     xmlns:r="clr-namespace:URSpot.Core.Resources;assembly=URSpot.Core"
     xmlns:renderer="clr-namespace:URSpot.Core.Pages.Common;assembly=URSpot.Core"
     xmlns:controls="clr-namespace:URSpot.Core.Pages.Controls;assembly=URSpot.Core"
     xmlns:viewModels="clr-namespace:URSpot.Core.ViewModels;assembly=URSpot.Core"
@@ -12,62 +14,50 @@
         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10" Spacing="20">
 
-                <Image Source="profile.png" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="80" HeightRequest="80" Aspect="AspectFit" Margin="0,10,0,10" />
+                <renderer:CircleImage Source="{m:ImageResource ProfileImage.png}" Style="{StaticResource ProfileImage}"  />
 
-                <renderer:NoBorderEntry x:Name="FirstName" Placeholder="First Name" HorizontalTextAlignment="Center" />
+                <renderer:NoBorderEntry x:Name="FirstName" Placeholder="{Static r:CommonResources.FirstName}" HorizontalTextAlignment = "Center"  />
                 <controls:Separator />
 
-                <renderer:NoBorderEntry x:Name="LastName" Placeholder="Last Name" HorizontalTextAlignment="Center" />
+                <renderer:NoBorderEntry x:Name="LastName" Placeholder="{Static r:CommonResources.LastName}"  HorizontalTextAlignment = "Center" />
                 <controls:Separator />
 
-                <renderer:NoBorderEntry x:Name="Username" Placeholder="Username" HorizontalTextAlignment="Center" />
+                <renderer:NoBorderEntry x:Name="Username" Placeholder="{Static r:CommonResources.UserName}"  HorizontalTextAlignment = "Center" />
                 <controls:Separator />
 
-                <renderer:NoBorderEntry x:Name="Email" Placeholder="Email Address" Keyboard="Email" HorizontalTextAlignment="Center" />
+                <renderer:NoBorderEntry x:Name="Email" Placeholder="{Static r:CommonResources.Email}" Keyboard="Email"  HorizontalTextAlignment = "Center" />
                 <controls:Separator />
 
-                <renderer:NoBorderEntry x:Name="Age" Placeholder="Age" Keyboard="Numeric" HorizontalTextAlignment="Center" />
+                <renderer:NoBorderEntry x:Name="Age" Placeholder="{Static r:CommonResources.Age}" Keyboard="Numeric"  HorizontalTextAlignment = "Center" />
                 <controls:Separator />
 
-                <Label Text="GENDER" HorizontalTextAlignment="Center" TextColor="White" />
+                <Label Text="{Static r:CommonResources.Gender}"  HorizontalTextAlignment = "Center" TextColor="White" />
                 <controls:Separator Aspect="AspectFit" />
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" Spacing="10">
-                    <Button x:Name="MaleButton" Text="Male" Clicked="MaleBtn_Clicked" TextColor="White" BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="1" BorderRadius="22" HeightRequest="40" ClassId="MaleBtn" />
-                    <Button x:Name="FemaleButton" Text="Female" Clicked="FemaleBtn_Clicked" TextColor="White" BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="1" BorderRadius="22" HeightRequest="40" ClassId="FemaleBtn" />
-                    <Button x:Name="CustomButton" Text="Custom" Clicked="CustomBtn_Clicked" TextColor="White" BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="1" BorderRadius="22" HeightRequest="40" ClassId="CustomBtn" />
+                    <Button x:Name="MaleButton" Text="{Static r:CommonResources.GenderMale}" Clicked="MaleBtn_Clicked" Style="{StaticResource roundCornerTransparentBackgroundbutton}" ClassId="MaleBtn" />
+                    <Button x:Name="FemaleButton" Text="{Static r:CommonResources.GenderFemale}" Clicked="FemaleBtn_Clicked" Style="{StaticResource roundCornerTransparentBackgroundbutton}" ClassId="FemaleBtn" />
+                    <Button x:Name="CustomButton" Text="{Static r:CommonResources.GenderCustom}" Clicked="CustomBtn_Clicked" Style="{StaticResource roundCornerTransparentBackgroundbutton}" ClassId="CustomBtn" />
                 </StackLayout>
 
-                <Picker HorizontalOptions="CenterAndExpand" TextColor="White" SelectedIndex="1" BackgroundColor="Transparent">
-                    <Picker.Items>
-                        <x:String >Favorite Music</x:String>
-                        <x:String >Music 1</x:String>
-                        <x:String>Music 2</x:String>
-                    </Picker.Items>
-                    <Picker.SelectedIndex>0</Picker.SelectedIndex>
-                </Picker>
+                <Picker x:Name="FavoriteMusicList" Style="{StaticResource ProfilePicker}"/>
+                    
                 <controls:Separator />
 
-                <Picker HorizontalOptions="CenterAndExpand" TextColor="White"  SelectedItem="1" BackgroundColor="Transparent">
-                    <Picker.Items>
-                        <x:String >Favorite Sports</x:String>
-                        <x:String>Sport 1</x:String>
-                        <x:String>Sport 2</x:String>
-                    </Picker.Items>
-                    <Picker.SelectedIndex>0</Picker.SelectedIndex>
-                </Picker>
+                <Picker x:Name="FavoriteSportsList" Style="{StaticResource ProfilePicker}"/>
+                    
                 <controls:Separator />
 
-                <Label Text="Would you like your location to be made visible to your friends" HorizontalTextAlignment="Center" TextColor="White" />
+                <Label Text="{Static r:CommonResources.LocationMessage}"  Style="{StaticResource labelTextCentreStyle}" />
                 <controls:Separator Aspect="AspectFit" />
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" Spacing="20">
-                    <Button x:Name="LocationVisibleBtn" Text="Yes" Clicked="LocationVisibleBtn_Clicked" TextColor="White" BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="1" BorderRadius="22" WidthRequest="100" HeightRequest="40" ClassId="VisibleBtn" />
-                    <Button x:Name="LocationNotVisibleBtn" Text="No" Clicked="LocationNotVisibleBtn_Clicked" TextColor="White" BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="1" BorderRadius="22" WidthRequest="100" HeightRequest="40" ClassId="NotVisibleBtn" />
+                    <Button x:Name="LocationVisibleBtn" Text="{Static r:CommonResources.AnswerYes}" Clicked="LocationVisibleBtn_Clicked" Style="{StaticResource roundCornerTransparentBackgroundbutton}" ClassId="VisibleBtn" />
+                    <Button x:Name="LocationNotVisibleBtn" Text="{Static r:CommonResources.AnswerNo}" Clicked="LocationNotVisibleBtn_Clicked" Style="{StaticResource roundCornerTransparentBackgroundbutton}" ClassId="NotVisibleBtn" />
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                    <Button Text="Delete Account" TextColor="Red" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" Margin="50,0,0,0" />
-                    <Image Source="bug.png" HorizontalOptions="End" WidthRequest="50" HeightRequest="50" Aspect="AspectFit">
+                    <Button Text="{Static r:CommonResources.DeleteAccount}" TextColor="Red" Style="{StaticResource roundCornerZeroBorderbutton}" />
+                    <Image Source="{m:ImageResource bug.png}" Style="{StaticResource bugImageButton}">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding BugCommand}" />
                         </Image.GestureRecognizers>

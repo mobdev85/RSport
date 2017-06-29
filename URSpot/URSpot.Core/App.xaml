@@ -114,6 +114,20 @@
         <Setter Property="FontAttributes" Value="Bold"></Setter>
         <Setter Property="FontSize" Value="Small"></Setter>
       </Style>
+
+            <!-- Text stlye center, bold-->
+      <Style x:Key="labelTextCentreStyle" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        <Setter Property="TextColor"  Value="White"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+        <Setter Property="FontSize" Value="Medium"></Setter>
+      </Style>
+
+
+       
+
+
+            
       <Style x:Key="smallLightLabelStyle" TargetType="Label" BasedOn="{StaticResource smallLabelStyle}">
         <Setter Property="TextColor" Value="{DynamicResource TextColorOnPurple}"></Setter>
       </Style>
@@ -187,6 +201,19 @@
         <Setter Property="MinimumWidthRequest" Value="{x:StaticResource Button_Width}"></Setter>
       </Style>
 
+
+      <Style TargetType="Image" x:Key="ProfileImage">
+        <Setter Property="Margin" Value="120,0"></Setter>
+      </Style>
+      <Style TargetType="Picker" x:Key="ProfilePicker">
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand"></Setter>
+        <Setter Property="TextColor" Value="White"></Setter>
+        <Setter Property="SelectedIndex" Value="1"></Setter>
+        <Setter Property="BackgroundColor" Value="Transparent"></Setter>        
+      </Style>
+            
+
+
       <Style TargetType="Button" x:Key="roundTransparentCornerbutton" BasedOn="{StaticResource roundCornerbutton}">
         <Setter Property="BackgroundColor" Value="{DynamicResource semiTransparentColor}"></Setter>
         <Setter Property="BorderColor" Value="{DynamicResource DeepBlue}"></Setter>
@@ -205,6 +232,33 @@
         <Setter Property="MinimumHeightRequest" Value="{x:StaticResource Button_Height}"></Setter>
         <Setter Property="WidthRequest" Value="{x:StaticResource Tiny_Button_Width}"></Setter>
         <Setter Property="MinimumWidthRequest" Value="{x:StaticResource Tiny_Button_Width}"></Setter>
+      </Style>
+
+      <Style x:Key="roundCornerTransparentBackgroundbutton" TargetType="Button">
+        <Setter Property="BorderColor" Value="Gray"></Setter>
+        <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+        <Setter Property="BorderWidth" Value="1"></Setter>
+        <Setter Property="TextColor" Value="Color.White"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+        <Setter Property="HorizontalOptions" Value="Center"></Setter>
+        <Setter Property="HorizontalOptions" Value="End"></Setter>
+        <Setter Property="BorderRadius" Value="{x:StaticResource Button_Half_Height}"></Setter>
+        <Setter Property="HeightRequest" Value="{x:StaticResource Button_Height}"></Setter>
+        <Setter Property="MinimumHeightRequest" Value="{x:StaticResource Button_Height}"></Setter>
+        <Setter Property="WidthRequest" Value="{x:StaticResource Tiny_Button_Width}"></Setter>
+        <Setter Property="MinimumWidthRequest" Value="{x:StaticResource Tiny_Button_Width}"></Setter>
+      </Style>
+
+      <Style x:Key="roundCornerZeroBorderbutton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+        <Setter Property="TextColor" Value="Color.White"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+        <Setter Property="HorizontalOptions" Value="Center"></Setter>
+        <Setter Property="BorderRadius" Value="{x:StaticResource Button_Half_Height}"></Setter>
+        <Setter Property="HeightRequest" Value="{x:StaticResource Button_Height}"></Setter>
+        <Setter Property="MinimumHeightRequest" Value="{x:StaticResource Button_Height}"></Setter>
+        <Setter Property="WidthRequest" Value="{x:StaticResource Button_Width}"></Setter>
+        <Setter Property="MinimumWidthRequest" Value="{x:StaticResource Button_Width}"></Setter>
       </Style>
 
       <Style x:Key="tinyroundCornerCenteredbutton" TargetType="Button">
@@ -263,6 +317,15 @@
       <Style TargetType="Entry">
         <Setter Property="TextColor" Value="Color.White"></Setter>
       </Style>
+
+
+       <Style x:Key="bugImageButton" TargetType="Image">
+        <Setter Property="HorizontalOptions" Value="End"></Setter>
+        <Setter Property="WidthRequest" Value="50"></Setter>
+        <Setter Property="HeightRequest" Value="50"></Setter>
+        <Setter Property="Aspect" Value="AspectFit"></Setter>        
+      </Style>      
+            
       
       <Style x:Key="ArrowMoreBlack"  TargetType="mm:TintedImage">
         <Setter Property="Source" Value="{mm:ImageResource Icons/ic_chevron_up_black*.png}"></Setter>
