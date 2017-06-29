@@ -105,5 +105,268 @@ namespace URSpot.Core.Resources {
                 return ResourceManager.GetString("MenuSignIn", resourceCulture);
             }
         }
-    }
+
+
+		/// <summary>
+		///   Looks up a localized string similar to FirstName.
+		/// </summary>
+		internal static string FirstName
+		{
+			get
+			{
+				return ResourceManager.GetString("FirstName", resourceCulture);
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized string similar to LastName.
+		/// </summary>
+		internal static string LastName
+		{
+			get
+			{
+				return ResourceManager.GetString("LastName", resourceCulture);
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized string similar to UserName.
+		/// </summary>
+		internal static string UserName
+		{
+			get
+			{
+				return ResourceManager.GetString("UserName", resourceCulture);
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized string similar to LabelTextProfile.
+		/// </summary>
+		internal static string LabelTextProfile
+		{
+			get
+			{
+				return ResourceManager.GetString("LabelTextProfile", resourceCulture);
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized string similar to Email.
+		/// </summary>
+		internal static string Email
+		{
+			get
+			{
+				return ResourceManager.GetString("Email", resourceCulture);
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized string similar to Age.
+		/// </summary>
+		internal static string Age
+		{
+			get
+			{
+				return ResourceManager.GetString("Age", resourceCulture);
+			}
+		}
+
+
+
+		/// <summary>
+		///   Looks up a localized string similar to Gender.
+		/// </summary>
+		internal static string Gender
+		{
+			get
+			{
+				return ResourceManager.GetString("Gender", resourceCulture);
+			}
+		}
+
+
+		/// <summary>
+		///   Looks up a localized string similar to GenderMale.
+		/// </summary>
+		internal static string GenderMale
+		{
+			get
+			{
+				return ResourceManager.GetString("GenderMale", resourceCulture);
+			}
+		}
+
+
+		/// <summary>
+		///   Looks up a localized string similar to GenderFemale.
+		/// </summary>
+		internal static string GenderFemale
+		{
+			get
+			{
+				return ResourceManager.GetString("GenderFemale", resourceCulture);
+			}
+		}
+
+
+		/// <summary>
+		///   Looks up a localized string similar to GenderCustom.
+		/// </summary>
+		internal static string GenderCustom
+		{
+			get
+			{
+				return ResourceManager.GetString("GenderCustom", resourceCulture);
+			}
+		}
+
+
+
+		/// <summary>
+		///   Looks up a localized string similar to LocationMessage.
+		/// </summary>
+		internal static string LocationMessage
+		{
+			get
+			{
+				return ResourceManager.GetString("LocationMessage", resourceCulture);
+			}
+		}
+
+
+		/// <summary>
+		///   Looks up a localized string similar to AnswerYes.
+		/// </summary>
+		internal static string AnswerYes
+		{
+			get
+			{
+				return ResourceManager.GetString("AnswerYes", resourceCulture);
+			}
+		}
+
+
+		/// <summary>
+		///   Looks up a localized string similar to AnswerNo.
+		/// </summary>
+		internal static string AnswerNo
+		{
+			get
+			{
+				return ResourceManager.GetString("AnswerNo", resourceCulture);
+			}
+		}
+
+
+		/// <summary>
+		///   Looks up a localized string similar to DeleteAccount.
+		/// </summary>
+		internal static string DeleteAccount
+		{
+			get
+			{
+				return ResourceManager.GetString("DeleteAccount", resourceCulture);
+			}
+		}
+
+
+		/// <summary>
+		///   Looks up a localized string similar to BugPlaceHolder.
+		/// </summary>
+		internal static string BugPlaceHolder
+		{
+			get
+			{
+				return ResourceManager.GetString("BugPlaceHolder", resourceCulture);
+			}
+		}
+
+
+		/// <summary>
+		///   Looks up a localized string similar to LabelTextSocialNetworks.
+		/// </summary>
+		internal static string LabelTextSocialNetworks
+		{
+			get
+			{
+				return ResourceManager.GetString("LabelTextSocialNetworks", resourceCulture);
+			}
+		}
+
+
+		/// <summary>
+		///   Looks up a localized string similar to LabelTextPayment.
+		/// </summary>
+		internal static string LabelTextPayment
+		{
+			get
+			{
+				return ResourceManager.GetString("LabelTextPayment", resourceCulture);
+			}
+		}
+
+
+		/// <summary>
+		///   Looks up a localized string similar to LabelTextRewards.
+		/// </summary>
+		internal static string LabelTextRewards
+		{
+			get
+			{
+				return ResourceManager.GetString("LabelTextRewards", resourceCulture);
+			}
+		}
+
+
+		/// <summary>
+		///   Looks up a localized string similar to LabelTextInviteFriend.
+		/// </summary>
+		internal static string LabelTextInviteFriend
+		{
+			get
+			{
+				return ResourceManager.GetString("LabelTextInviteFriend", resourceCulture);
+			}
+		}
+
+
+
+		/// <summary>
+		///   Looks up a localized string similar to LabelTextPromotion.
+		/// </summary>
+		internal static string LabelTextPromotion
+		{
+			get
+			{
+				return ResourceManager.GetString("LabelTextPromotion", resourceCulture);
+			}
+		}
+
+
+		/// <summary>
+		///   Looks up a localized string similar to LabelTextAboutApp.
+		/// </summary>
+		internal static string LabelTextAboutApp
+		{
+			get
+			{
+				return ResourceManager.GetString("LabelTextAboutApp", resourceCulture);
+			}
+		}
+
+
+		/// <summary>
+		///   Looks up a localized string similar to LabelTextSignout.
+		/// </summary>
+		internal static string LabelTextSignout
+		{
+			get
+			{
+				return ResourceManager.GetString("LabelTextSignout", resourceCulture);
+			}
+		}
+
+	}
 }

@@ -190,6 +190,9 @@
     <Compile Include="Pages\Account\MyProfilePage.xaml.cs">
       <DependentUpon>MyProfilePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Components\Column.xaml.cs">
+      <DependentUpon>Column.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -209,6 +212,22 @@
     <EmbeddedResource Include="Pages\Account\MyProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Components\Column.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\social.png" />
+    <EmbeddedResource Include="Images\signout.png" />
+    <EmbeddedResource Include="Images\separator.png" />
+    <EmbeddedResource Include="Images\rewards.png" />
+    <EmbeddedResource Include="Images\promotions.png" />
+    <EmbeddedResource Include="Images\profile.png" />
+    <EmbeddedResource Include="Images\payment.png" />
+    <EmbeddedResource Include="Images\invite_friends.png" />
+    <EmbeddedResource Include="Images\bug_button.png" />
+    <EmbeddedResource Include="Images\bug.png" />
+    <EmbeddedResource Include="Images\background.png" />
+    <EmbeddedResource Include="Images\about_urspot.png" />
+    <EmbeddedResource Include="Images\ProfileImage.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.UserDialogs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -288,6 +307,7 @@
   <ItemGroup>
     <Folder Include="GoogleMaps\" />
     <Folder Include="Pages\Menu\" />
+    <Folder Include="Pages\Components\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Account\LaunchPage.xaml">
